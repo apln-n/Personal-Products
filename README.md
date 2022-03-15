@@ -1,12 +1,12 @@
 # Personal-Products
 
-本リポジトリには、これまで私が個人的に作成したプログラムが保存されています。
-以下に概要を記します。
+本リポジトリには、これまで私が個人的に作成したプログラムが保存されています。  
+以下に概要を記します。  
 
 
-rotation-tetris
-	2017.10.26
-	ゲーム『回転テトリス』で遊べます。
+*rotation-tetris*  
+	2017.10.26  
+	ゲーム『回転テトリス』で遊べます。  
 	高専の学校祭の学科展示用に作成し、多くの来場者にプレイしていただき、大変な好評を博しました。
 		講義でC言語とOpenGL(2D)を用いてごく簡単なゲームを作成する実験があり、そこで配布されたテンプレート(ウィンドウを表示するだけ)を参考に『回転テトリス』を発案し、一人で学科展示で使えるレベルのプログラムに仕上げました。
 		私自身が作成/編集した箇所は以下の通りです:
@@ -17,12 +17,12 @@ rotation-tetris
 		(2017.10.26の物です)
 
 
-merge-internet-shortcut
+*merge-internet-shortcut*
 	2019.8.20
 	複数のインターネットショートカットを一つのhtmlファイルに統合できます。
 
 
-AMT-page-transition-sample
+*AMT-page-transition-sample*
 	2021.9.20
 	Amazon Mechanical Turk (AMT)上にて、ページ遷移を伴うクラウドソーシングを実施する際のサンプルプログラム。
 		修士1年の研究で作成したプログラムを元に作成。
@@ -30,7 +30,7 @@ AMT-page-transition-sample
 	使用する際は、AMTのRequester側のプログラムを書く欄(Design Layout)にそのままコピペしてください。
 
 
-twitter-recommended-topic-remover
+*twitter-recommended-topic-remover*
 	2022.2.8
 	Twitterのタイムラインに表示されるおすすめトピックを削除します。
 		具体的には、指定されたユーザ(ブラウザでログイン済み)がフォローしている「おすすめトピック」を、PyAutoGUIを用いて一つずつ取り外すことで実現しています。
