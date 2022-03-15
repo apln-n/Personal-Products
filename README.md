@@ -12,6 +12,7 @@
 		* main_simple.c  
 		* ActiveBlock_LotateDefine.h  
 		* ColorSamples.h のcolor_array[12][4]の定義  
+		(VS2012で動作を確認)
 ゲームの詳細なルールはwordファイルを参照してください。  
 	(2017.10.26の物です)  
 
