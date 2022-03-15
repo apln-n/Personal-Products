@@ -10,9 +10,9 @@
 	講義でC言語とOpenGL(2D)を用いてごく簡単なゲームを作成する実験があり、そこで配布されたテンプレート(ウィンドウを表示するだけ)を参考に『回転テトリス』を発案し、一人で学科展示で使えるレベルのプログラムに仕上げました。  
 	私自身が作成/編集した箇所は以下の通りです:  
 	```
-		main_simple.c  
-		ActiveBlock_LotateDefine.h  
-		ColorSamples.h のcolor_array[12][4]の定義  
+		- main_simple.c  
+		- ActiveBlock_LotateDefine.h  
+		- ColorSamples.h のcolor_array[12][4]の定義  
 	```
 ゲームの詳細なルールはwordファイルを参照してください。  
 	(2017.10.26の物です)  
