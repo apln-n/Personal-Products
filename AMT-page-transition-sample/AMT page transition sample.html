@@ -1,0 +1,123 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+    <!-- start_window -> something_window -> finish_window (-> submitting) -->
+	<div id="start_window">
+		<h2>Start!</h2>
+		<!-- start_button is used for transition to the next window(page) -->
+		<!-- IMPORTANT: Type must be a "button" -->
+		<button id="start_button" type="button">Next</button>
+	</div>
+	
+	<div id="something_window" style="display: none">
+		<h2>Something</h2>
+		<div>
+		    <table border="0">
+				<tr>
+					<td>Blood type: </td>
+					<td>
+						<input type="radio" name="blood" value="A">A
+						<input type="radio" name="blood" value="B">B
+						<input type="radio" name="blood" value="O">O
+						<input type="radio" name="blood" value="AB">AB
+					</td>
+				</tr>
+			</table>
+		</div>
+		<button id="something_button" type="button">Next</button>
+	</div>
+	
+	<div id="finish_window" style="display: none">
+		<h2>Finish!</h2>
+		<!-- submit_button (finish_button?) is used for submitting a user's answers -->
+		<!-- IMPORTANT: submit_button must be a "crowd-button" -->
+		<crowd-button id="submit_button" form-action="submit" style="display: block;">Submit</crowd-button>
+	</div>
+	
+	
+	<script>
+	    var startWindow = document.getElementById('start_window')
+	    var somethingWindow = document.getElementById('something_window')
+	    var finishWindow = document.getElementById('finish_window')
+	    
+	    var startButton = document.getElementById('start_button')
+	    var somethingButton = document.getElementById('something_button')
+	    startButton.addEventListener('click', startButtonClicked, false)
+	    somethingButton.addEventListener('click', somethingButtonClicked, false)
+
+	    //Map the next page(window) "div" to the "*_button" on the current page.
+	    //It's not necessary to write the function "(lastpage name)ButtonClicked()".
+	    //start_window -> something_window -> finish_window (-> submitting)
+	    function startButtonClicked(){
+			startWindow.style = "display: none"
+			somethingWindow.style = "display: block"
+		}
+		
+	    function somethingButtonClicked(){
+			somethingWindow.style = "display: none"
+			makeCrowdInputs()
+			finishWindow.style = "display: block"
+		}
+	</script>
+	
+	<script>
+	    function getSomethingValues(){
+	        var q_results = []
+	        // for(var i=0;i<=???.length;i++){
+    	        radios = document.getElementsByName("blood")
+    			for(var j=0;j<radios.length;j++){
+    				if(radios[j].checked){
+    					q_results.push(radios[j].value)
+    					break
+    				}
+    			}
+    			if(q_results.length == 0){
+					q_results.push("xxx")
+				}
+			// }
+	        return q_results.join('_')
+	    }
+	</script>
+  
+    <script>
+        function makeCrowdInputs(){
+            //Make each "crowd-input"
+			var makeCrowdInput = function(name,value){
+				crowd_input = document.createElement('crowd-input')
+				crowd_input.style = "display:none"
+				crowd_input.name = name
+				crowd_input.value = value
+				return crowd_input
+			}
+			
+			var somethingStr = getSomethingValues()
+			
+			//All inputs must be remove.
+		    var inputs = document.querySelectorAll('input')
+		    var textareas = document.querySelectorAll('textarea')
+			for(var i=0;i<inputs.length;i++){
+			    inputs[i].remove()
+			}
+			for(var i=0;i<textareas.length;i++){
+				textareas[i].remove()
+			}
+			
+			//Make "crowd-input" as elements.
+			var crowd_inputs = []
+			crowd_inputs.push( makeCrowdInput("something", somethingStr) )
+
+			//Embedding "crowd-input" to html.
+			var buffer = document.createElement('div')
+			buffer.style = "display: none"
+			for(var i=0;i<crowd_inputs.length;i++){
+				buffer.appendChild(crowd_inputs[i])
+			}
+			finishWindow.appendChild(buffer)
+        }
+    </script>
+</crowd-form>
