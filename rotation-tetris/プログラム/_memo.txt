@@ -1,0 +1,4 @@
+Visual Studio 2015で実行確認済。
+	ビルド時は「プラットフォームツールセット」をv140(Visual Studio 2015)に設定してください。
+
+Visual Studio 2015でexe化をして出来るReleaseフォルダに、本ゲームの実行ファイル(exe)が出力されます。

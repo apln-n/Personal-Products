@@ -1,0 +1,14 @@
+﻿  GLUT_Core.c
+  GLUT_Model.c
+  GLUT_Texture.c
+  main_simple.c
+  MathToolkit.c
+  Quaternion.c
+  Sleep.c
+  コード生成しています。
+  1 of 117 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  コード生成が終了しました。
+  Lecture_Template.vcxproj -> C:\apln\高専\プログラム\Ｃ++のやつ\回転テトリス\Lecture_Template - コピー (就活用)\Lecture_Template\Release\Lecture_Template.exe
+  Lecture_Template.vcxproj -> C:\apln\高専\プログラム\Ｃ++のやつ\回転テトリス\Lecture_Template - コピー (就活用)\Lecture_Template\Release\Lecture_Template.pdb (Full PDB)
