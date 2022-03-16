@@ -20,7 +20,8 @@
 
 ## merge-internet-shortcut  
 2019.8.20  
-複数のインターネットショートカットを一つのhtmlファイルに統合できます。  
+ローカルに置かれた複数のインターネットショートカットを一つのhtmlファイルに統合できます。  
+使用方法はReadme.txtを参照してください。
 
 
 ## AMT-page-transition-sample
