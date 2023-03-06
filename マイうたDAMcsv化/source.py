@@ -113,8 +113,8 @@ def isEqualSong(li1, li2):
 			# len(s1) <= len(s2)
 			[s1, s2] = [li1[i],li2[i]] if (len(li1[i])<=len(li2[i])) else [li2[i],li1[i]]
 			#リストにする
-			s1 = list(s1)
-			s2 = list(s2)
+			s1 = list(s1.replace(" ","").lower())
+			s2 = list(s2.replace(" ","").lower())
 			while(len(s1)>0):
 				if(s1[0] in s2):
 					index = s2.index(s1[0])
