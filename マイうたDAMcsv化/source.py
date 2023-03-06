@@ -72,7 +72,7 @@ def cleaning(songLists):
 		{"left":"(", "right":")"},
 		{"left":"（", "right":"）"},
 		{"left":"[", "right":"]"},
-		{"left":"〈", "right":"〉"},	
+		#{"left":"〈", "right":"〉"},	
 		#{"left":"-", "right":"-"},
 		#{"left":"～", "right":"～"},
 		]
@@ -80,9 +80,10 @@ def cleaning(songLists):
 	for lists in songLists:
 		data.append([])
 		for li in lists:
-			#曲名と歌手名
 			data[-1].append([])
-			for s in li:
+			#曲名と歌手名
+			#同じ名前の曲が無いなら歌手名を考慮しない方が良いかもしれない
+			for s in li[:1]:
 				i = 0
 				while(i<len(brackets)):
 					if(brackets[i]["left"] in s and brackets[i]["right"] in s):
@@ -97,6 +98,7 @@ def cleaning(songLists):
 				if(s[-1] == " "):
 					s = s[:-1]
 				data[-1][-1].append(s)
+				data[-1][-1].append(li[1])
 			if(li[0] != s):
 				print(li)
 				print(data[-1][-1])

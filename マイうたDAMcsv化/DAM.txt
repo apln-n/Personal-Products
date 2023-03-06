@@ -384,6 +384,7 @@ JASRAC許諾番号
 NexTone
 NexTone許諾番号
 ID000002945 ID000002947 ID000002937 ID000002938
+
 DAM★とも
 曲を探す
 
@@ -406,6 +407,26 @@ MYリスト4
 MYりれき
 並び替え
 
+ラグトレイン
+稲葉曇
+0
+…
+時世界～トキセカイ～
+アミル(伊藤かな恵)、ネリス(相沢舞)、エアリィ(三上枝織)
+0
+…
+餞の鳥
+D/Zeal[ジュリア(CV.愛美)、最上静香(CV.田所あずさ)]
+0
+…
+世界の約束
+倍賞千恵子
+0
+…
+Daydream cafe
+Petit Rabbit's
+0
+…
 風のトラベラー
 ジョー・リノイエ with 水野佐彩
 0
@@ -641,7 +662,68 @@ MYリスト2
 MYリスト3
 MYリスト4
 MYりれき
-曲が存在しません
+並び替え
+
+Arrietty's Song
+セシル・コルベル
+0
+…
+蒼空に舞え、墨染の桜
+Silver Forest feat.さゆり
+0
+…
+動く、動く
+チト(CV:水瀬いのり)、ユーリ(CV:久保ユリカ)
+0
+…
+ン・パカ マーチ(歌唱:原紗友里)(生音)
+原紗友里(あにそんボーカルVer.)
+0
+…
+地球をあげる
+はるまきごはん
+0
+…
+チルノのパーフェクトさんすう教室
+イオシス/miko(Alternative ending),quim(IOSYS)
+0
+…
+Scarborough Fair [スカボロー・フェア]
+Simon & Garfunkel
+0
+…
+恋の氷結おてんば湯けむりチルノ温泉
+イオシス/miko(Alternative ending)
+0
+…
+運命狂サディスティック
+イオシス/あゆ(KKproject)
+0
+…
+馬と鹿
+米津玄師
+0
+…
+ECHO
+CIRCRUSH(Circus-P+Crusher-P) feat.Gumi English
+0
+…
+夏祭り
+Whiteberry
+0
+…
+夜な夜な夜な
+倉橋ヨエコ
+0
+…
+why,or why not
+大嶋啓之 feat.片霧烈火
+0
+…
+かくしん的☆めたまるふぉ～ぜっ!
+土間うまる(CV:田中あいみ)
+0
+…
 保存
 キャンセル
 Singing 昭和ソングを歌おう！！
