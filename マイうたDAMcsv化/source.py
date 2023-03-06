@@ -80,25 +80,26 @@ def cleaning(songLists):
 	for lists in songLists:
 		data.append([])
 		for li in lists:
-			#とりあえず曲名だけ
-			songname = li[0]
-			i = 0
-			while(i<len(brackets)):
-				if(brackets[i]["left"] in songname and brackets[i]["right"] in songname):
-					indexLeft = songname.index(brackets[i]["left"])
-					for j in range(indexLeft+1, len(songname)):
-						if(songname[j] == brackets[i]["right"]):
-							indexRight = j
-							songname = songname[:indexLeft] + songname[indexRight+1:]
-							i = 0
-							break
-				i += 1
-			if(songname[-1] == " "):
-				songname = songname[:-1]
-			data[-1].append( [songname, *li[1:]] )
-			if(li[0] != songname):
-				#print(li)
-				#print(data[-1][-1])
+			#曲名と歌手名
+			data[-1].append([])
+			for s in li:
+				i = 0
+				while(i<len(brackets)):
+					if(brackets[i]["left"] in s and brackets[i]["right"] in s):
+						indexLeft = s.index(brackets[i]["left"])
+						for j in range(indexLeft+1, len(s)):
+							if(s[j] == brackets[i]["right"]):
+								indexRight = j
+								s = s[:indexLeft] + s[indexRight+1:]
+								i = 0
+								break
+					i += 1
+				if(s[-1] == " "):
+					s = s[:-1]
+				data[-1][-1].append(s)
+			if(li[0] != s):
+				print(li)
+				print(data[-1][-1])
 				continue
 	return data
 
