@@ -100,8 +100,8 @@ def cleaning(songLists):
 				data[-1][-1].append(s)
 				data[-1][-1].append(li[1])
 			if(li[0] != s):
-				print(li)
-				print(data[-1][-1])
+				#print(li)
+				#print(data[-1][-1])
 				continue
 	return data
 
@@ -111,12 +111,16 @@ def cleaning(songLists):
 def isEqualSong(li1, li2):
 	if(len(li1) <= 2):
 		flag = True
+		#同じ名前でなくとも短い曲名が長い曲名にアナグラムとして含まれることがあるので、歌手名での比較もすると良い
 		for i in range(0,len(li1)):
 			# len(s1) <= len(s2)
 			[s1, s2] = [li1[i],li2[i]] if (len(li1[i])<=len(li2[i])) else [li2[i],li1[i]]
 			#リストにする
 			s1 = list(s1.replace(" ","").replace("，","").replace(",","").lower())
 			s2 = list(s2.replace(" ","").replace("，","").replace(",","").lower())
+			if(i==1 and "(" in s1):
+				n = s1.index("(")
+				s1 = s1[:n]
 			while(len(s1)>0):
 				if(s1[0] in s2):
 					index = s2.index(s1[0])
@@ -155,6 +159,7 @@ def merge(songLists, symbols):
 				else:
 					con[-1][3] = symbols[i]
 		print("Concatenated: {}".format(len(con)))
+
 		# i,j: 曲の行
 		merged = []
 		while(len(con)>0):
@@ -167,6 +172,7 @@ def merge(songLists, symbols):
 					for j in range(0,len(symbols)-1):
 						if(con[i][j+2]!="-" and merged[-1][j+2]=="-"):
 							merged[-1][j+2] = con[i][j+2]
+
 							con.pop(i)
 							break
 					#print(merged[-1])
