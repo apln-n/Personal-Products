@@ -12,7 +12,13 @@ def getJoySound1():
 				print("JoySound1: {}".format(size))
 				break
 		if(size != -1):
-			li = li[8:-12]
+			i=0
+			j=len(li)-1
+			while(li[i][0] != "\n"):
+				i += 1
+			while(li[j][:-1] != "±0"):
+				j -= 1
+			li = li[i:j+1]
 			li = [s.replace("\n", "") for s in li]
 			tmp = []
 			# 曲数n
