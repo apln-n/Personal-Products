@@ -8,8 +8,10 @@
 
 - WordPressでインポートしたサンプル  
 	[これ(http://www.apln.work/2022/10/14/カラオケレパートリー/)](http://www.apln.work/2022/10/14/%e3%82%ab%e3%83%a9%e3%82%aa%e3%82%b1%e3%83%ac%e3%83%91%e3%83%bc%e3%83%88%e3%83%aa%e3%83%bc/)  
+	列名をクリックしてソート可能(記号順…○、-、☆もいける)、画像は「Others」でソートした物です
+	<img src="_素材/スクショ1.png" alt="スクショ1" style="width: 75%">
 - `確認用.csv`のサンプル  
-	<img src="_素材/スクショ.png" alt="スクショ">  
+	<img src="_素材/スクショ2.png" alt="スクショ2" style="width: 100%">  
 
 補足: 歌手名が無くても`source.py`は実行可能ではある(特に`JoySound2.txt`、`Others.txt`)
 
