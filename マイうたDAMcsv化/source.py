@@ -1,4 +1,4 @@
-import sys, csv, json
+import sys, csv, json, re
 
 # マイうたに登録できる曲
 def getJoySound1():
@@ -57,7 +57,7 @@ def getManuallyAdds(name):
 			# 各要素の文字列を"／"(スラッシュ)で分解して曲ごとにリストにする
 			tmp = []
 			for s in li:
-				splited = s.split("／")
+				splited = re.split("[／/]", s)
 				if(len(splited) == 2):
 					tmp.append(splited)
 				else:
@@ -113,7 +113,8 @@ def cleaning(songLists):
 		#{"left":"～", "right":"～"},
 		]
 	data = []
-	for lists in songLists:
+	# Othersはそのまま素通りさせる
+	for lists in songLists[:3]:
 		data.append([])
 		for li in lists:
 			data[-1].append([])
@@ -139,6 +140,10 @@ def cleaning(songLists):
 				#print(li)
 				#print(data[-1][-1])
 				continue
+	# Others
+	data.append([])
+	for li in songLists[3]:
+		data[-1].append(li)
 	return data
 
 
@@ -207,20 +212,23 @@ def merge(songLists, symbols):
 		while(len(con)>0):
 			# con[0]を軸に比較する(重要)
 			merged.append( con[0] )
-			for i in range(1,len(con)):
-				# 同じ曲だった場合
-				if( isEqualSong(merged[-1][:2], con[i][:2]) ):
-					#マイナス1してる
-					for j in range(0,len(symbols)-1):
-						if(con[i][j+2]!="-" and merged[-1][j+2]=="-"):
-							merged[-1][j+2] = con[i][j+2]
-
-							con.pop(i)
-							break
-					#print(merged[-1])
-					break
-				else:
-					continue
+			# Othersの曲でない場合は比較
+			if(con[0][4] != symbols[3]):
+				#con[1]から見る
+				for i in range(1,len(con)):
+					# 同じ曲だった場合
+					if( isEqualSong(merged[-1][:2], con[i][:2]) ):
+						#JoySound, DAMの2つ
+						#JoySound2にある曲がJoySound1にもあるなら、「○?」は要らない
+						for j in range(0,2):
+							if(con[i][j+2]!="-" and merged[-1][j+2]=="-"):
+								merged[-1][j+2] = con[i][j+2]
+								con.pop(i)
+								break
+						#print(merged[-1])
+						break
+					else:
+						continue
 			# con[0]は毎回appendされるのでpopしておく、実質の「i--」と似た働き
 			con.pop(0)
 		print("Merged: {}".format(len(merged)))
