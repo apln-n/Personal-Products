@@ -10,9 +10,9 @@
 	講義でC言語とOpenGL(2D)を用いてごく簡単なゲームを作成する実験があり、そこで配布されたテンプレート(ウィンドウを表示するだけ)を参考に『回転テトリス』を発案し一人で作成しました。 
 	私自身が作成/編集した箇所は以下の通りです:  
 	```
-		* main_simple.c  
-		* ActiveBlock_LotateDefine.h (落ちてくるブロックを回転させるためのプログラム)  
-		* ColorSamples.h のcolor_array[12][4]の定義  
+		main_simple.c  
+		ActiveBlock_LotateDefine.h (落ちてくるブロックを回転させるためのプログラム)  
+		ColorSamples.h のcolor_array[12][4]の定義  
 		(VS2015で動作を確認)  
 	```
 ゲームのルールについてはwordファイルを参照してください。  
@@ -21,7 +21,7 @@
 ## merge-internet-shortcut  
 2019.8.20  
 ローカルに置かれた複数のインターネットショートカットを一つのhtmlファイルに統合できます。  
-使用方法はReadme.txtを参照してください。
+[(詳細)](https://github.com/apln-n/Personal-Products/tree/main/merge-internet-shortcut)
 
 
 ## AMT-page-transition-sample
@@ -43,3 +43,9 @@ Twitterのタイムラインに表示されるおすすめトピックを削除�
 制約:  
 	Twitterをダークテーマに設定していたり、フォントサイズを変更しているとうまく動作しない可能性があります。
 	動作しない場合は、arrow.png、footer.png等を自身の環境のものに置き換えてください。(スクショ→トリミング→リネーム)  
+
+## マイうたDAMcsv化
+[(詳細)](https://github.com/apln-n/Personal-Products/tree/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96)
+
+## ChieImages
+[(詳細)](https://github.com/apln-n/Personal-Products/tree/main/ChieImages)

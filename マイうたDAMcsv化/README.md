@@ -19,7 +19,7 @@ PCで↑を開き、全選択(ctrl+a)して`JoySound1.txt`に上書きで貼り�
 
 - `source.py`実行時に曲数が出てくるので、ブラウザの曲数と合っているか要確認。  
 
-ここに保存した曲は、`result.csv`の**「JoySound」の属性に「○」**が付きます
+ここに保存した曲は、`result.csv`の<strong>「JoySound」の属性に「○」</strong>が付きます
 
 
 ## `JoySound2.txt`
@@ -28,7 +28,7 @@ JOYSOUNDのマイうたには無いが検索すると出てくる曲。
 
 - [サンプルURL](https://github.com/apln-n/Personal-Products/blob/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96/JoySound2.txt)  
 
-ここに保存した曲は、`result.csv`の**「JoySound」の属性に「○?」**が付きます  
+ここに保存した曲は、`result.csv`の<strong>「JoySound」の属性に「○?」</strong>が付きます  
 (※JoySoundで調べて初めて出てくるので)
 
 ## `DAM.txt`
@@ -38,7 +38,7 @@ PCで↑を開き、MYリスト1の画面で全選択して`DAM.txt`に上書き
 
 - **毎回2回以上の改行をする(強調)**
 
-ここに保存した曲は、`result.csv`の**「DAM」の属性に「○」**が付きます  
+ここに保存した曲は、`result.csv`の<strong>「DAM」の属性に「○」</strong>が付きます  
 
 
 ## `Others.txt`
@@ -47,5 +47,5 @@ JOYSOUND、DAMのどちらの機種にも存在しない曲。
 
 - [サンプルURL](https://github.com/apln-n/Personal-Products/blob/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96/Others.txt)
 
-ここに保存した曲は、`result.csv`の**「他」の属性に「○」**が付きます  
+ここに保存した曲は、`result.csv`の<strong>「他」の属性に「○」</strong>が付きます  
 ※もし「他」の属性と「JoySound」or「DAM」の属性に「○」が重複してある場合、`Others.txt`に保存した曲が既にJOYSOUNDかDAMの機種にあることが予想されます
