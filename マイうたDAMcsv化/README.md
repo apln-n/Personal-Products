@@ -1,27 +1,51 @@
 # マイうたDAMcsv化
 
+## 概要
 以下の最大4つの**テキストファイルに曲を保存し**、  
 本ディレクトリで**`source.py`を実行する**ことで、曲の重複を(~~ほぼ~~)除いて結合させた`result.csv`が出力されます。  
 `result.csv`はWordPressのプラグイン「TablePress」にインポートできる形式になっており、  
-`確認用.csv`は`result.csv`の文字コードをcp932(Shift_JIS)にした物です(雑)  
+`確認用.csv`は`result.csv`を見やすくcp932(Shift_JIS)にした物です。  
+
+- WordPressでインポートしたサンプル  
+	[これ(http://www.apln.work/2022/10/14/カラオケレパートリー/)](http://www.apln.work/2022/10/14/%e3%82%ab%e3%83%a9%e3%82%aa%e3%82%b1%e3%83%ac%e3%83%91%e3%83%bc%e3%83%88%e3%83%aa%e3%83%bc/)  
+- `確認用.csv`のサンプル  
+	<img src="_素材/スクショ.png" alt="スクショ">  
 ---
 
 ## `JoySound1.txt`
 [JOYSOUNDのマイうた](https://utasuki.joysound.com/utasuki/mypage/mysong/)に保存されている曲。  
 PCで↑を開き、全選択(ctrl+a)して`JoySound1.txt`に上書きで貼り付けて保存。  
-このときブラウザである程度スクロールしておくと、全選択時の「漏れ」が無くて済む。曲数要確認。
+このときブラウザである程度スクロールしておくと、全選択時の「漏れ」が無くて済む。
+
+- `source.py`実行時に曲数が出てくるので、ブラウザの曲数と合っているか要確認。  
+
+ここに保存した曲は、`result.csv`の**「JoySound」の属性に「○」**が付きます
+
 
 ## `JoySound2.txt`
 JOYSOUNDのマイうたには無いが検索すると出てくる曲。  
-あれば手動で、「曲名／歌手名」の形式で保存。  
-[※サンプルURL](https://github.com/apln-n/Personal-Products/blob/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96/JoySound2.txt)
+あれば1曲ずつ、「曲名／歌手名」の形式で保存。  
+
+- [サンプルURL](https://github.com/apln-n/Personal-Products/blob/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96/JoySound2.txt)  
+
+ここに保存した曲は、`result.csv`の**「JoySound」の属性に「○?」**が付きます  
+(※JoySoundで調べて初めて出てくるので)
 
 ## `DAM.txt`
 [DAMのMYデンモク](https://www.clubdam.com/app/damtomo/mydenmoku/mylistListUp.do?listNo=1)に保存されている曲。  
 PCで↑を開き、MYリスト1の画面で全選択して`DAM.txt`に上書きで貼り付ける。  
-その後、MYリスト2、3、4と順番に全選択して、↑で貼り付けた物の後ろに追加する形で順次保存。  
+その後、MYリスト2、3、4と順番に全選択して、↑で貼り付けた物の後ろに追加する形で、**2回以上改行を入れたのち**順次保存。  
+
+- **毎回2回以上の改行をする(強調)**
+
+ここに保存した曲は、`result.csv`の**「DAM」の属性に「○」**が付きます  
+
 
 ## `Others.txt`
 JOYSOUND、DAMのどちらの機種にも存在しない曲。  
 `JoySound2.txt`と同様に、あれば手動で「曲名／歌手名」の形式で保存。  
-[※サンプルURL](https://github.com/apln-n/Personal-Products/blob/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96/Others.txt)
+
+- [サンプルURL](https://github.com/apln-n/Personal-Products/blob/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96/Others.txt)
+
+ここに保存した曲は、`result.csv`の**「他」の属性に「○」**が付きます  
+※もし「他」の属性と「JoySound」or「DAM」の属性に「○」が重複してある場合、`Others.txt`に保存した曲が既にJOYSOUNDかDAMの機種にあることが予想されます
