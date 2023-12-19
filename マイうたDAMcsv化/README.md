@@ -4,12 +4,17 @@
 以下の最大4つの**テキストファイルに曲を保存し**、  
 本ディレクトリで**`source.py`を実行する**ことで、曲の重複を(~~ほぼ~~)除いて結合させた`result.csv`が出力されます。  
 `result.csv`はWordPressのプラグイン「TablePress」にインポートできる形式になっており、  
-`確認用.csv`は`result.csv`を見やすくcp932(Shift_JIS)にした物です。  
+`確認用.csv`は`result.csv`を見やすくcp932(Shift_JIS)にした物です。 
 
 - WordPressでインポートしたサンプル  
 	[これ(http://www.apln.work/2022/10/14/カラオケレパートリー/)](http://www.apln.work/2022/10/14/%e3%82%ab%e3%83%a9%e3%82%aa%e3%82%b1%e3%83%ac%e3%83%91%e3%83%bc%e3%83%88%e3%83%aa%e3%83%bc/)  
 - `確認用.csv`のサンプル  
 	<img src="_素材/スクショ.png" alt="スクショ">  
+
+補足: 歌手名が無くても`source.py`は実行可能ではある(特に`JoySound2.txt`、`Others.txt`)
+
+- なので面倒な時は曲名だけで良い
+
 ---
 
 ## `JoySound1.txt`
@@ -48,4 +53,4 @@ JOYSOUND、DAMのどちらの機種にも存在しない曲。
 - [サンプルURL](https://github.com/apln-n/Personal-Products/blob/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96/Others.txt)
 
 ここに保存した曲は、`result.csv`の<strong>「他」の属性に「○」</strong>が付きます  
-※もし「他」の属性と「JoySound」or「DAM」の属性に「○」が重複してある場合、`Others.txt`に保存した曲が既にJOYSOUNDかDAMの機種にあることが予想されます
+※もし「他」の属性と「JoySound」or「DAM」の属性に「○」が重複してある場合、`Others.txt`に保存した曲が既にJOYSOUNDかDAMの機種にある可能性があります

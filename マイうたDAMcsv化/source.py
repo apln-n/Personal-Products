@@ -4,72 +4,102 @@ import sys, csv, json
 def getJoySound1():
 	with open ("JoySound1.txt", "r") as f:
 		li = f.readlines()
-		# マイうたページ全体をコピーしてくる
-		size = -1
-		for s in li:
-			if("マイうた（" in s and "件）" in s):
-				size = int( s[len("マイうた（"): -(len("件）")+1)] )
-				print("JoySound1: {}".format(size))
-				break
-		if(size != -1):
-			i=0
-			j=len(li)-1
-			while(li[i][0] != "\n"):
-				i += 1
-			while(li[j][:-1] != "±0"):
-				j -= 1
-			li = li[i:j+1]
-			li = [s.replace("\n", "") for s in li]
-			tmp = []
-			# 曲数n
-			n = int(len(li)/8)
-			for i in range(0,n):
-				j = i*8
-				tmp.append( [li[j+2], li[j+4] ] )
-				# いま追加された曲
-				# print(tmp[-1])
-			if(len(tmp) == size):
-				return tmp
-			else:
-				print("error: マイうたのコピーが正しく行われていません")
-				sys.exit(-1)
+		if(len(li)==0):
+			print("JoySound1: 0")
+			return []
 		else:
-			print("error: マイうたの曲数が取得できませんでした")
-			sys.exit(-1)
+			# マイうたページ全体をコピーしてくる
+			size = -1
+			for s in li:
+				if("マイうた（" in s and "件）" in s):
+					size = int( s[len("マイうた（"): -(len("件）")+1)] )
+					print("JoySound1: {}".format(size))
+					break
+			if(size != -1):
+				i=0
+				j=len(li)-1
+				while(li[i][0] != "\n"):
+					i += 1
+				while(li[j][:-1] != "±0"):
+					j -= 1
+				li = li[i:j+1]
+				li = [s.replace("\n", "") for s in li]
+				tmp = []
+				# 曲数n
+				n = int(len(li)/8)
+				for i in range(0,n):
+					j = i*8
+					tmp.append( [li[j+2], li[j+4] ] )
+					# いま追加された曲
+					# print(tmp[-1])
+				if(len(tmp) == size):
+					return tmp
+				else:
+					print("error: マイうたのコピーが正しく行われていません")
+					sys.exit(-1)
+			else:
+				print("error: マイうたの曲数が取得できませんでした")
+				sys.exit(-1)
+
+# getJoySound2(), Others()の本体
+def getManuallyAdds(name):
+	with open ("{}.txt".format(name), "r") as f:
+		li = f.readlines()
+		if(len(li)==0):
+			print("{}: 0".format(name))
+			return []
+		else:
+			#改行のみの要素を削除
+			li = [s for s in li if s != "\n" ]
+			#要素中の改行(文字)、余計な文字列を削除
+			li = [s.replace("\n", "") for s in li]
+			print("{}: {}".format(name,len(li)))
+			# 各要素の文字列を"／"(スラッシュ)で分解して曲ごとにリストにする
+			tmp = []
+			for s in li:
+				splited = s.split("／")
+				if(len(splited) == 2):
+					tmp.append(splited)
+				else:
+					tmp.append([s, ""])
+			return tmp
 
 # マイうたに登録できない曲
 # JOYSOUNDで1曲ずつ直接調べて持ってくる
 def getJoySound2():
-	with open ("JoySound2.txt", "r") as f:
-		li = f.readlines()
-		#改行のみの要素を削除
-		li = [s for s in li if s != "\n" ]
-		#要素中の改行(文字)、余計な文字列を削除
-		li = [s.replace("\n", "") for s in li]
-		print("JoySound2: {}".format(len(li)))
-		# 各要素の文字列を"／"で分解して曲ごとにリストにする
-		li = [ [*( li[i].split("／") )] for i,s in enumerate(li) ]
-		return li
+	return getManuallyAdds("JoySound2")
+
 
 # DAMとものマイリストを1つずつ、ページ全体をコピーして4つ貼り付ける
 def getDAM():
 	with open ("DAM.txt", "r") as f:
 		li = f.readlines()
-		#要素中の改行(文字)、余計な文字列を削除
-		li = [s.replace("\n", "") for s in li]
-		data = []
-		for i in range(0,len(li)):
-			if(li[i] == "…"):
-				tmp = [li[i-3], li[i-2]]
-				if(tmp not in data):
-					data.append( tmp )
-		print("DAM: {}".format(len(data)))
-		return data
+		if(len(li)==0):
+			print("DAM: 0")
+			return []
+		else:
+			#要素中の改行(文字)、余計な文字列を削除
+			li = [s.replace("\n", "") for s in li]
+			data = []
+			for i in range(0,len(li)):
+				if(li[i] == "…"):
+					tmp = [li[i-3], li[i-2]]
+					if(tmp not in data):
+						data.append( tmp )
+			print("DAM: {}".format(len(data)))
+			return data
+
+# Others
+# JoySound2と同様に追加していく(あれば)
+# 処理はgetJoySound2()と同様
+def getOthers():
+	return getManuallyAdds("Others")
+
 
 # [曲名, 歌手名]
-# [JoySound1, JoySound2, Dam]
+# [JoySound1, JoySound2, Dam, Others]
 def getSongLists():
-	return [getJoySound1(), getJoySound2(), getDAM()]
+	return [getJoySound1(), getJoySound2(), getDAM(), getOthers()]
 
 
 def cleaning(songLists):
@@ -151,7 +181,7 @@ def isEqualSong(li1, li2):
 		sys.exit(-1)
 
 # songlists: [JoySound1(2次元リスト), JoySound2, DAM]
-# con: [曲名, 歌手名, JoySound(シンボル), DAM]
+# con: [ [曲名, 歌手名, JoySound(シンボル), DAM] ]
 # songlistsは3次元リスト
 def merge(songLists, symbols):
 	if(len(songLists) > 0):
@@ -159,11 +189,17 @@ def merge(songLists, symbols):
 		con = []
 		for i,lists in enumerate(songLists):
 			for j,li in enumerate(lists):
-				con.append( [*li[:2], "-", "-"] )
-				if(i in [0,1]):
+				con.append( [*li[:2], "-", "-", "-"] )
+				if(i == 0 or i == 1):
 					con[-1][2] = symbols[i]
-				else:
+				elif(i == 2):
 					con[-1][3] = symbols[i]
+				elif(i == 3):
+					con[-1][4] = symbols[i]
+				else:
+					print("error: 以下は、JoySound1, 2, DAM, Othersのどれにも保存されていない曲です")
+					print(li[:2])
+					sys.exit(-1)
 		print("Concatenated: {}".format(len(con)))
 
 		# i,j: 曲の行
@@ -197,21 +233,21 @@ def merge(songLists, symbols):
 
 
 # csv書き込み
-def writeSongs(mergedLists):
+def writeSongs(mergedLists, colNames):
 	with open("result.csv", "w", newline="") as f:
 		writer = csv.writer(f)
-		writer.writerow( ["id", "曲名", "歌手名", "JoySound", "DAM"] )
+		writer.writerow( colNames )
 		writer.writerows(mergedLists)
 	# encodingはデバッグ用
 	with open("確認用.csv", "w", newline="", encoding="cp932") as f:
 		writer = csv.writer(f)
-		writer.writerow( ["id", "曲名", "歌手名", "JoySound", "DAM"] )
+		writer.writerow( colNames )
 		writer.writerows(mergedLists)
 
 
 def checkSongLists(songLists):
 	pflag = True
-	name = ["JoySound1", "JoySound2", "DAM"]
+	name = ["JoySound1", "JoySound2", "DAM", "Others"]
 	print("Check song lists...")
 	if(len(songLists) == len(name)):
 		if(pflag):
@@ -229,9 +265,8 @@ def checkSongLists(songLists):
 
 
 #2次元リスト
-def checkMergedLists(mergedLists):
+def checkMergedLists(mergedLists, colNames):
 	pflag = True
-	colNames = ["id", "曲名", "歌手名", "JoySound", "DAM"]
 	print("Check merged list...")
 	#idはマージする時に付加した
 	if(len(mergedLists[0])  == len(colNames)):
@@ -262,10 +297,11 @@ def func():
 	songLists = getSongLists()
 	songLists = cleaning(songLists)
 	checkSongLists(songLists)
-	symbols = ["○", "○?", "○"]
+	symbols = ["○", "○?", "○", "☆"]
 	#2次元リスト
 	mergedLists = merge(songLists, symbols)
-	checkMergedLists(mergedLists)
-	writeSongs(mergedLists)
+	colNames = ["id", "曲名", "歌手名", "JoySound", "DAM", "Others"]
+	checkMergedLists(mergedLists, colNames)
+	writeSongs(mergedLists, colNames)
 	print("Completed.")
 func()
