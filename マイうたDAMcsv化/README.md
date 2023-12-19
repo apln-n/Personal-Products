@@ -52,5 +52,5 @@ JOYSOUND、DAMのどちらの機種にも存在しない曲。
 
 - [サンプルURL](https://github.com/apln-n/Personal-Products/blob/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96/Others.txt)
 
-ここに保存した曲は、`result.csv`の<strong>「他」の属性に「○」</strong>が付きます  
-※もし「他」の属性と「JoySound」or「DAM」の属性に「○」が重複してある場合、`Others.txt`に保存した曲が既にJOYSOUNDかDAMの機種にある可能性があります
+ここに保存した曲は、`result.csv`の<strong>「Others」の属性に「○」</strong>が付きます  
+※もし「Others」の属性と「JoySound」or「DAM」の属性に「○」が重複してある場合、`Others.txt`に保存した曲が既にJOYSOUNDかDAMの機種にある可能性があります
