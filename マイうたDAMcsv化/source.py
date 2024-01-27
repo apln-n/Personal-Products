@@ -305,11 +305,14 @@ def func():
 	songLists = getSongLists()
 	songLists = cleaning(songLists)
 	checkSongLists(songLists)
-	symbols = ["○", "○?", "○", "☆"]
+	symbols = ["J.", "J.?", "D.", "O."]
 	#2次元リスト
 	mergedLists = merge(songLists, symbols)
 	colNames = ["id", "曲名", "歌手名", "JoySound", "DAM", "Others"]
 	checkMergedLists(mergedLists, colNames)
+	'''
+		Othersにある曲と、それ以外の曲を比較して「重複かも？」リストをプロンプトに表示するのも良さそう
+	'''
 	writeSongs(mergedLists, colNames)
 	print("Completed.")
 func()

@@ -26,7 +26,11 @@ PCで↑を開き、全選択(ctrl+a)して`JoySound1.txt`に上書きで貼り�
 
 - `source.py`実行時に曲数が出てくるので、ブラウザの曲数と合っているか要確認。  
 
-ここに保存した曲は、`result.csv`の<strong>「JoySound」の属性に「○」</strong>が付きます
+ここに保存した曲は、`result.csv`の<strong>「JoySound」の属性に「J.」</strong>が付きます
+
+<span style="color: grey; ">
+※表示(J.)の「.」はWordPressでの検索用です、以下同様
+</span>
 
 
 ## `JoySound2.txt`
@@ -35,8 +39,8 @@ JOYSOUNDのマイうたには無いが検索すると出てくる曲。
 
 - [サンプルURL](https://github.com/apln-n/Personal-Products/blob/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96/JoySound2.txt)  
 
-ここに保存した曲は、`result.csv`の<strong>「JoySound」の属性に「○?」</strong>が付きます  
-(※JoySoundで調べて初めて出てくるので)
+ここに保存した曲は、`result.csv`の<strong>「JoySound」の属性に「J.?」</strong>が付きます  
+(※マイうたに保存できず、JoySoundで検索しないと出てこない曲を指す)
 
 ## `DAM.txt`
 [DAMのMYデンモク](https://www.clubdam.com/app/damtomo/mydenmoku/mylistListUp.do?listNo=1)に保存されている曲。  
@@ -45,7 +49,7 @@ PCで↑を開き、MYリスト1の画面で全選択して`DAM.txt`に上書き
 
 - **毎回2回以上の改行をする(強調)**
 
-ここに保存した曲は、`result.csv`の<strong>「DAM」の属性に「○」</strong>が付きます  
+ここに保存した曲は、`result.csv`の<strong>「DAM」の属性に「D.」</strong>が付きます  
 
 
 ## `Others.txt`
@@ -54,5 +58,7 @@ JOYSOUND、DAMのどちらの機種にも存在しない曲。
 
 - [サンプルURL](https://github.com/apln-n/Personal-Products/blob/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96/Others.txt)
 
-ここに保存した曲は、`result.csv`の<strong>「Others」の属性に「○」</strong>が付きます  
-※もし「Others」の属性と「JoySound」or「DAM」の属性に「○」が重複してある場合、`Others.txt`に保存した曲が既にJOYSOUNDかDAMの機種にある可能性があります
+ここに保存した曲は、`result.csv`の<strong>「Others」の属性に「O.」</strong>が付きます  
+<!-- 
+~~※もし「Others」の属性と「JoySound」or「DAM」の属性に「O」が重複してある場合、`Others.txt`に保存した曲が既にJOYSOUNDかDAMの機種にある可能性があります~~  
+-->
