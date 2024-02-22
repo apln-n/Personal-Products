@@ -21,7 +21,7 @@
 
 ## `JoySound1.txt`
 [JOYSOUNDのマイうた](https://utasuki.joysound.com/utasuki/mypage/mysong/)に保存されている曲。  
-PCで↑を開き、全選択(ctrl+a)して`JoySound1.txt`に上書きで貼り付けて保存。  
+PCで↑を開き、「<strong>登録順</strong>」で全選択(ctrl+a)して`JoySound1.txt`に上書きで貼り付けて保存。  
 このときブラウザである程度スクロールしておくと、全選択時の「漏れ」が無くて済む。
 
 - `source.py`実行時に曲数が出てくるので、ブラウザの曲数と合っているか要確認。  
