@@ -40,7 +40,6 @@ JOYSOUNDのマイうたには無いが検索すると出てくる曲。
 - [サンプルURL](https://github.com/apln-n/Personal-Products/blob/main/%E3%83%9E%E3%82%A4%E3%81%86%E3%81%9FDAMcsv%E5%8C%96/JoySound2.txt)  
 
 ここに保存した曲は、`result.csv`の<strong>「JoySound」の属性に「J.?」</strong>が付きます  
-(※マイうたに保存できず、JoySoundで検索しないと出てこない曲を指す)
 
 ## `DAM.txt`
 [DAMのMYデンモク](https://www.clubdam.com/app/damtomo/mydenmoku/mylistListUp.do?listNo=1)に保存されている曲。  

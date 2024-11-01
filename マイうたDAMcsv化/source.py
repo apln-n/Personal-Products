@@ -57,7 +57,7 @@ def getManuallyAdds(name):
 			# 各要素の文字列を"／"(スラッシュ)で分解して曲ごとにリストにする
 			tmp = []
 			for s in li:
-				splited = re.split("[／/]", s)
+				splited = re.split("[／]", s)
 				if(len(splited) == 2):
 					tmp.append(splited)
 				else:
