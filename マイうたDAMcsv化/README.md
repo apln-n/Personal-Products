@@ -41,7 +41,7 @@ JOYSOUNDのマイうたには無いが検索すると出てくる曲。
 
 ここに保存した曲は、`result.csv`の<strong>「JoySound」の属性に「J.?」</strong>が付きます  
 
-## `DAM.txt`
+## `DAM1.txt`
 [DAMのMYデンモク](https://www.clubdam.com/app/damtomo/mydenmoku/mylistListUp.do?listNo=1)に保存されている曲。  
 PCで↑を開き、MYリスト1の画面で全選択して`DAM.txt`に上書きで貼り付ける。  
 その後、MYリスト2、3、4と順番に全選択して、↑で貼り付けた物の後ろに追加する形で、**2回以上改行を入れたのち**順次保存。  
@@ -50,6 +50,11 @@ PCで↑を開き、MYリスト1の画面で全選択して`DAM.txt`に上書き
 
 ここに保存した曲は、`result.csv`の<strong>「DAM」の属性に「D.」</strong>が付きます  
 
+## `DAM2.txt`
+上記`JoySound2.txt`と似たような物。  
+MYデンモクに保存できなかった曲を手動で「曲名／歌手名」の形式で保存。
+
+ここに保存した曲は、`result.csv`の<strong>「DAM」の属性に「D.?」</strong>が付きます  
 
 ## `Others.txt`
 JOYSOUND、DAMのどちらの機種にも存在しない曲。  

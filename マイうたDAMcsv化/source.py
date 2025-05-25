@@ -64,18 +64,13 @@ def getManuallyAdds(name):
 					tmp.append([s, ""])
 			return tmp
 
-# マイうたに登録できない曲
-# JOYSOUNDで1曲ずつ直接調べて持ってくる
-def getJoySound2():
-	return getManuallyAdds("JoySound2")
-
 
 # DAMとものマイリストを1つずつ、ページ全体をコピーして4つ貼り付ける
-def getDAM():
-	with open ("DAM.txt", "r") as f:
+def getDAM1():
+	with open ("DAM1.txt", "r") as f:
 		li = f.readlines()
 		if(len(li)==0):
-			print("DAM: 0")
+			print("DAM1: 0")
 			return []
 		else:
 			#要素中の改行(文字)、余計な文字列を削除
@@ -86,20 +81,23 @@ def getDAM():
 					tmp = [li[i-3], li[i-2]]
 					if(tmp not in data):
 						data.append( tmp )
-			print("DAM: {}".format(len(data)))
+			print("DAM1: {}".format(len(data)))
 			return data
 
-# Others
-# JoySound2と同様に追加していく(あれば)
-# 処理はgetJoySound2()と同様
+# JOYSOUND2, DAM2, Others
+# マイうたやうたスキに登録できない曲
+# 1曲ずつ直接持ってくる
+def getJoySound2():
+	return getManuallyAdds("JoySound2")
+def getDAM2():
+	return getManuallyAdds("DAM2")
 def getOthers():
 	return getManuallyAdds("Others")
 
-
 # [曲名, 歌手名]
-# [JoySound1, JoySound2, Dam, Others]
+# [JoySound1, JoySound2, Dam1, Dam2, Others]
 def getSongLists():
-	return [getJoySound1(), getJoySound2(), getDAM(), getOthers()]
+	return [getJoySound1(), getJoySound2(), getDAM1(), getDAM2(), getOthers()]
 
 
 def cleaning(songLists):
@@ -114,7 +112,7 @@ def cleaning(songLists):
 		]
 	data = []
 	# Othersはそのまま素通りさせる
-	for lists in songLists[:3]:
+	for lists in songLists[:-1]:
 		data.append([])
 		for li in lists:
 			data[-1].append([])
@@ -142,7 +140,7 @@ def cleaning(songLists):
 				continue
 	# Others
 	data.append([])
-	for li in songLists[3]:
+	for li in songLists[-1]:
 		data[-1].append(li)
 	return data
 
@@ -185,24 +183,24 @@ def isEqualSong(li1, li2):
 		print("error: リストに余計な情報が入っています")
 		sys.exit(-1)
 
-# songlists: [JoySound1(2次元リスト), JoySound2, DAM]
-# con: [ [曲名, 歌手名, JoySound(シンボル), DAM] ]
+# songlists: [JoySound1(2次元リスト), JoySound2, DAM1, DAM2]
+# con: [ [曲名, 歌手名, JoySound(シンボル), DAM(シンボル)] ]
 # songlistsは3次元リスト
 def merge(songLists, symbols):
 	if(len(songLists) > 0):
 		# 2次元リストとして連結
 		con = []
 		for i,lists in enumerate(songLists):
-			for j,li in enumerate(lists):
+			for li in lists:
 				con.append( [*li[:2], "-", "-", "-"] )
 				if(i == 0 or i == 1):
 					con[-1][2] = symbols[i]
-				elif(i == 2):
+				elif(i==2 or i== 3):
 					con[-1][3] = symbols[i]
-				elif(i == 3):
+				elif(i==4):
 					con[-1][4] = symbols[i]
 				else:
-					print("error: 以下は、JoySound1, 2, DAM, Othersのどれにも保存されていない曲です")
+					print("error: 以下は、JoySound1, 2, DAM1, 2, Othersのどれにも保存されていない曲です")
 					print(li[:2])
 					sys.exit(-1)
 		print("Concatenated: {}".format(len(con)))
@@ -210,26 +208,26 @@ def merge(songLists, symbols):
 		# i,j: 曲の行
 		merged = []
 		while(len(con)>0):
-			# con[0]を軸に比較する(重要)
-			merged.append( con[0] )
+			# con[0]を軸とする(重要)
 			# Othersの曲でない場合は比較
-			if(con[0][4] != symbols[3]):
-				#con[1]から見る
+			if(con[0][-1] != symbols[-1]):
+				#con[i=1]から見る
 				for i in range(1,len(con)):
 					# 同じ曲だった場合
-					if( isEqualSong(merged[-1][:2], con[i][:2]) ):
+					if( isEqualSong(con[0][:2], con[i][:2]) ):
 						#JoySound, DAMの2つ
 						#JoySound2にある曲がJoySound1にもあるなら、「○?」は要らない
+						#DAMも同様
 						for j in range(0,2):
-							if(con[i][j+2]!="-" and merged[-1][j+2]=="-"):
-								merged[-1][j+2] = con[i][j+2]
-								con.pop(i)
-								break
-						#print(merged[-1])
+							if(con[i][j+2]!="-" and con[0][j+2]=="-"):
+								con[0][j+2] = con[i][j+2]
+							con.pop(i)
+						#print(con[0])
 						break
 					else:
 						continue
 			# con[0]は毎回appendされるのでpopしておく、実質の「i--」と似た働き
+			merged.append( con[0] )
 			con.pop(0)
 		print("Merged: {}".format(len(merged)))
 		#id付加
@@ -242,6 +240,7 @@ def merge(songLists, symbols):
 
 # csv書き込み
 def writeSongs(mergedLists, colNames):
+	print("Write songs to CSV file...")
 	with open("result.csv", "w", newline="") as f:
 		writer = csv.writer(f)
 		writer.writerow( colNames )
@@ -255,14 +254,14 @@ def writeSongs(mergedLists, colNames):
 
 def checkSongLists(songLists):
 	pflag = True
-	name = ["JoySound1", "JoySound2", "DAM", "Others"]
+	name = ["JoySound1", "JoySound2", "DAM1", "DAM2", "Others"]
 	print("Check song lists...")
 	if(len(songLists) == len(name)):
 		if(pflag):
 			for i in range(0,len(name)):
 				print("----------------------------------- {} -----------------------------------".format(name[i]))
 				# サンプル
-				for li in songLists[i][:10]:
+				for li in songLists[i][:5]:
 					print(li)
 				if(len(songLists[i]) > 10):
 					print("...")
@@ -274,7 +273,6 @@ def checkSongLists(songLists):
 
 #2次元リスト
 def checkMergedLists(mergedLists, colNames):
-	pflag = True
 	print("Check merged list...")
 	#idはマージする時に付加した
 	if(len(mergedLists[0])  == len(colNames)):
@@ -288,13 +286,13 @@ def checkMergedLists(mergedLists, colNames):
 				print("error: 以下の曲の情報を確認してください")
 				print(li)
 				sys.exit(-1)
-		if(pflag):
-			print(", ".join(colNames))
-			# サンプル
-			for li in mergedLists[:10]:
-				print(li)
-			if(len(mergedLists) > 10):
-				print("...")
+		print("----------------------------------- Result -----------------------------------")
+		print(", ".join(colNames))
+		# サンプル
+		for li in mergedLists[:5]:
+			print(li)
+		if(len(mergedLists) > 5):
+			print("...")
 		return
 	else:
 		print("error: 適切にデータがマージされていません")
@@ -305,7 +303,7 @@ def func():
 	songLists = getSongLists()
 	songLists = cleaning(songLists)
 	checkSongLists(songLists)
-	symbols = ["J.", "J.?", "D.", "O."]
+	symbols = ["J.", "J.?", "D.", "D.?", "O."]
 	#2次元リスト
 	mergedLists = merge(songLists, symbols)
 	colNames = ["id", "曲名", "歌手名", "JoySound", "DAM", "Others"]
