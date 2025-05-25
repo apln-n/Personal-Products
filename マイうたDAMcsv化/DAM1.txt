@@ -20,6 +20,70 @@ MYリスト4
 MYりれき
 並び替え
 
+Summoning 101
+Mili
+0
+…
+ヒバナ(Game Version)
+DECO*27
+0
+…
+恋人形
+凋叶棕
+0
+…
+幻想症候群
+幽閉サテライト
+0
+…
+快晴
+Orangestar
+0
+…
+熱風
+kemu feat.初音ミク
+0
+…
+メロメロイド
+かいりきベア
+0
+…
+Close Your Eyes
+彩音
+0
+…
+嘘と慟哭
+凋叶棕
+0
+…
+はじまりの未来
+初音ミク
+0
+…
+ヤミナベ!!!!
+cosMo@暴走P feat.初音ミク
+0
+…
+明星ロケット
+岸田教団&THE明星ロケッツ
+0
+…
+KilLove Fireproof!
+暁Records
+0
+…
+純情アルメリア
+森羅万象
+0
+…
+童遊 [オリカラ](生音)
+凋叶棕
+0
+…
+Leia
+ゆよゆっぺ feat.巡音ルカ
+0
+…
 エンパープル
 はるまきごはん feat.初音ミク
 0
@@ -68,26 +132,6 @@ KOKIA
 凋叶棕
 0
 …
-きゅうり味のビールを飲めばいいよ!
-イオシス/神波千尋
-0
-…
-物凄い勢いでけーねが物凄いうた
-Halozy feat. ななひら
-0
-…
-物凄い狂っとるフランちゃんが物凄いうた
-Halozy feat. ななひら
-0
-…
-物凄いバーニングで魔理沙が物凄いうた
-Halozy feat. ななひら
-0
-…
-物凄いコロシアムでアリスが物凄いうた
-Halozy feat. ななひら
-0
-…
 もしも時を跳べたら
 霜月はるか
 0
@@ -98,22 +142,6 @@ Flower Garden
 …
 飛翔、蒼の最果て
 紺碧studio
-0
-…
-想いの果て
-tohko(トーコ)
-0
-…
-Long for…
-瀬名
-0
-…
-CorLeonis
-やなぎなぎ
-0
-…
-concent
-やなぎなぎ
 0
 …
 euaru
@@ -186,10 +214,10 @@ ENJOY DAM
 
 SPECIAL
 
-DAMをもっと楽しめる情報を毎週発信中！
+DAMをもっと楽しめる情報を発信中！
 
-ボカロハロウィン特集
-DAMであそぼうII めざせフルコンボ！ 精密採点DXミリオンにチャレンジ！
+DAMアニカラFes!!2025
+ニコニコ超会議2025
 キャンペーン
 
 CAMPAIGN
@@ -197,25 +225,25 @@ CAMPAIGN
 課題曲を歌って応募して、
 豪華景品をGETしよう！
 
-ピックアップアーティスト WANIMA
-宝鐘マリン
-エスプリ
-GLAY 30周年コラボキャンペーン
-UNISON SQUARE GARDEN
-MISAMO
-THE ALFEE
-さくらみこ
-マルシィ
-西野カナ
-あいみょん
-back number
+ピックアップアーティスト GLAY
+猫又おかゆ
 BABYMONSTER
-東方ダンマクカグラ
-米津玄師
-SUPER EIGHT
-ONE OK ROCK
-HIMEHINA
-NEO EXILE
+あにそんボーカル保住有哉
+しまじろうコンサート
+超ときめき宣伝部
+ウマ娘 プリティーダービー
+TREASURE
+テイルズ オブ フェスティバル 2025
+KAWAII LAB
+初音ミク JAPAN LIVE TOUR 2025
+サザンオールスターズ
+ロックは淑女の嗜みでして
+劇場版『名探偵コナン 隻眼の残像』
+Ado
+Official髭男dism
+STPR Family Festival
+WHITE JAM
+AI　全DAM
 オーディション
 
 AUDITION
@@ -223,8 +251,9 @@ AUDITION
 オーディションに応募して、
 ステージ出場の権利をGETしよう！
 
+CHANCE GALs新メンバーオーディション
 プロレベル認定歌手
-歌唱王2024
+日本クラウン 新人オーディション2025
 カラオケバトル
 サイトマップ お問い合わせ DAM DAM★とも カラオケ＠DAM
 サイトのご利用について カラオケご利用にあたっての注意事項 DAM★とも会員規約 月額制サービスご利用にあたって
@@ -269,20 +298,24 @@ MYリスト4
 MYりれき
 並び替え
 
+サッドガール・セックス
+DECO*27
+0
+…
+モニタリング
+DECO*27
+0
+…
+愛されなくても君がいる
+ピノキオピー
+0
+…
+ローリンガール(ミクパ♪2012)(生音)
+wowaka feat.初音ミク
+0
+…
 ロミオとシンデレラ
 doriko feat.初音ミク
-0
-…
-孤独月
-幽閉サテライト
-0
-…
-回る空うさぎ
-ダズビー
-0
-…
-Mrs.Pumpkinの滑稽な夢
-ハチ feat.初音ミク
 0
 …
 nuit
@@ -321,10 +354,6 @@ nuit
 ゆうゆ feat.初音ミク
 0
 …
-誇り高きアイドル
-HoneyWorks feat. Kotoha
-0
-…
 ラテラリティ
 やなぎなぎ
 0
@@ -357,10 +386,6 @@ supercell
 島みやえい子(島宮えい子)
 0
 …
-カザハネ
-霜月はるか
-0
-…
 鳥の詩
 Lia
 0
@@ -389,10 +414,6 @@ sasakure.UK feat.初音ミク
 木村弓
 0
 …
-can cry
-やなぎなぎ
-0
-…
 ゼロの足跡
 角巻わため
 0
@@ -417,16 +438,8 @@ DECO*27
 DECO*27
 0
 …
-Bad Apple!! feat. nomico -Silhouette MV Ver.- [オリカラ](生音)
-Alstroemeria Records
-0
-…
 バイオレンストリガー
 八王子P
-0
-…
-シンデレラアバター
-幽閉サテライト
 0
 …
 華鳥風月
@@ -487,10 +500,10 @@ ENJOY DAM
 
 SPECIAL
 
-DAMをもっと楽しめる情報を毎週発信中！
+DAMをもっと楽しめる情報を発信中！
 
-ボカロハロウィン特集
-DAMであそぼうII めざせフルコンボ！ 精密採点DXミリオンにチャレンジ！
+DAMアニカラFes!!2025
+ニコニコ超会議2025
 キャンペーン
 
 CAMPAIGN
@@ -498,25 +511,25 @@ CAMPAIGN
 課題曲を歌って応募して、
 豪華景品をGETしよう！
 
-ピックアップアーティスト WANIMA
-宝鐘マリン
-エスプリ
-GLAY 30周年コラボキャンペーン
-UNISON SQUARE GARDEN
-MISAMO
-THE ALFEE
-さくらみこ
-マルシィ
-西野カナ
-あいみょん
-back number
+ピックアップアーティスト GLAY
+猫又おかゆ
 BABYMONSTER
-東方ダンマクカグラ
-米津玄師
-SUPER EIGHT
-ONE OK ROCK
-HIMEHINA
-NEO EXILE
+あにそんボーカル保住有哉
+しまじろうコンサート
+超ときめき宣伝部
+ウマ娘 プリティーダービー
+TREASURE
+テイルズ オブ フェスティバル 2025
+KAWAII LAB
+初音ミク JAPAN LIVE TOUR 2025
+サザンオールスターズ
+ロックは淑女の嗜みでして
+劇場版『名探偵コナン 隻眼の残像』
+Ado
+Official髭男dism
+STPR Family Festival
+WHITE JAM
+AI　全DAM
 オーディション
 
 AUDITION
@@ -524,8 +537,9 @@ AUDITION
 オーディションに応募して、
 ステージ出場の権利をGETしよう！
 
+CHANCE GALs新メンバーオーディション
 プロレベル認定歌手
-歌唱王2024
+日本クラウン 新人オーディション2025
 カラオケバトル
 サイトマップ お問い合わせ DAM DAM★とも カラオケ＠DAM
 サイトのご利用について カラオケご利用にあたっての注意事項 DAM★とも会員規約 月額制サービスご利用にあたって
@@ -570,56 +584,72 @@ MYリスト4
 MYりれき
 並び替え
 
-レイニーブーツ
-稲葉曇
+ゴーストダンス
+Aqu3ra
 0
 …
-ハナミズキ
-一青 窈
+ザムザ
+てにをは feat.初音ミク
+0
+…
+Aspirin
+無力P feat.巡音ルカ
+0
+…
+雪の華
+中島美嘉
+0
+…
+ダウンタイマー
+レトベア
+0
+…
+病み垢ステロイド
+かいりきベア
+0
+…
+バグ
+かいりきベア
+0
+…
+カーニバルハッピー
+かいりきベア
+0
+…
+キレキャリオン
+ポリスピカデリー
+0
+…
+雑魚
+柊マグネタイト
+0
+…
+キスキツネ
+HIMEHINA
+0
+…
+だめにんげんだ! feat. 重音テト
+薄塩指数
+0
+…
+Schwarz～そして少女は森の中～
+霜月はるか†Revo
+0
+…
+うらやみしい feat.Kai,初音ミク,可不
+ESHIKARA
 0
 …
 Demon Strundum
 ふぉれすとぴれお feat.ルシュカ
 0
 …
-QUEEN
-Kanaria
-0
-…
-ラグトレイン
-稲葉曇
-0
-…
-時世界～トキセカイ～
-アミル(伊藤かな恵)、ネリス(相沢舞)、エアリィ(三上枝織)
-0
-…
-餞の鳥
-D/Zeal[ジュリア(CV.愛美)、最上静香(CV.田所あずさ)]
-0
-…
 世界の約束
 倍賞千恵子
 0
 …
-Daydream cafe
-Petit Rabbit's
-0
-…
-風のトラベラー
-ジョー・リノイエ with 水野佐彩
-0
-…
 ぽかぽかの星
 はるまきごはん feat.初音ミク
-0
-…
-アイ・ウィッシュ・クロスフェード
-ふぉれすとぴれお feat.紫月菜乃
-0
-…
-スキスキ絶頂症
-koyori(電ポルP) feat.GUMI
 0
 …
 地球最後の告白を
@@ -634,24 +664,12 @@ Kanaria
 DECO*27
 0
 …
-心に届く詩
-Lia(Veil)
-0
-…
 もののけ姫
 米良美一
 ♯2
 …
-奈落の花
-島みやえい子(島宮えい子)
-0
-…
 桜花散華
 Riverside
-0
-…
-粉雪(生音)
-レミオロメン
 0
 …
 Weiβ～幻想への誘い～
@@ -660,10 +678,6 @@ Weiβ～幻想への誘い～
 …
 カザハネ
 霜月はるか
-0
-…
-RE:I AM
-Aimer(エメ)
 0
 …
 心のそばに
@@ -678,10 +692,6 @@ Belle
 中島美嘉
 0
 …
-SWEET HURT
-ReoNa
-0
-…
 泡沫、哀のまほろば
 幽閉サテライト
 0
@@ -694,14 +704,6 @@ Alstroemeria Records
 蝶々P feat.初音ミク
 0
 …
-Endless Embrace
-MYTH & ROID
-0
-…
-かたち
-安月名莉子
-0
-…
 Prototype
 niki feat.Lily
 0
@@ -710,24 +712,8 @@ niki feat.Lily
 niki feat.Lily
 0
 …
-A-Yah-YAh-YaH-YAH!
-ふぉれすとぴれお feat.めらみぽっぷ
-0
-…
 ウィアートル
 rionos
-0
-…
-お賽銭 ちょうだい
-イオシス/miko(Alternative ending)
-0
-…
-アリス→デレ
-イオシス/miko(Alternative ending)
-0
-…
-ねこ巫女れいむ
-イオシス/miko(Alternative ending)
 0
 …
 終わりへ向かう始まりの歌
@@ -746,20 +732,8 @@ supercell
 rionos
 0
 …
-ワンルームシュガーライフ (プロオケ)(生音)
-ナナヲアカリ
-0
-…
-運命狂サディスティック
-イオシス/あゆ(KKproject)
-0
-…
 Who Killed U.N.Owen
 Liz Triangle
-0
-…
--影二つ-
-riya
 0
 …
 SPiCa-ReACT-
@@ -788,10 +762,10 @@ ENJOY DAM
 
 SPECIAL
 
-DAMをもっと楽しめる情報を毎週発信中！
+DAMをもっと楽しめる情報を発信中！
 
-ボカロハロウィン特集
-DAMであそぼうII めざせフルコンボ！ 精密採点DXミリオンにチャレンジ！
+DAMアニカラFes!!2025
+ニコニコ超会議2025
 キャンペーン
 
 CAMPAIGN
@@ -799,25 +773,25 @@ CAMPAIGN
 課題曲を歌って応募して、
 豪華景品をGETしよう！
 
-ピックアップアーティスト WANIMA
-宝鐘マリン
-エスプリ
-GLAY 30周年コラボキャンペーン
-UNISON SQUARE GARDEN
-MISAMO
-THE ALFEE
-さくらみこ
-マルシィ
-西野カナ
-あいみょん
-back number
+ピックアップアーティスト GLAY
+猫又おかゆ
 BABYMONSTER
-東方ダンマクカグラ
-米津玄師
-SUPER EIGHT
-ONE OK ROCK
-HIMEHINA
-NEO EXILE
+あにそんボーカル保住有哉
+しまじろうコンサート
+超ときめき宣伝部
+ウマ娘 プリティーダービー
+TREASURE
+テイルズ オブ フェスティバル 2025
+KAWAII LAB
+初音ミク JAPAN LIVE TOUR 2025
+サザンオールスターズ
+ロックは淑女の嗜みでして
+劇場版『名探偵コナン 隻眼の残像』
+Ado
+Official髭男dism
+STPR Family Festival
+WHITE JAM
+AI　全DAM
 オーディション
 
 AUDITION
@@ -825,8 +799,9 @@ AUDITION
 オーディションに応募して、
 ステージ出場の権利をGETしよう！
 
+CHANCE GALs新メンバーオーディション
 プロレベル認定歌手
-歌唱王2024
+日本クラウン 新人オーディション2025
 カラオケバトル
 サイトマップ お問い合わせ DAM DAM★とも カラオケ＠DAM
 サイトのご利用について カラオケご利用にあたっての注意事項 DAM★とも会員規約 月額制サービスご利用にあたって
@@ -871,8 +846,100 @@ MYリスト4
 MYりれき
 並び替え
 
-私は雨
-稲葉曇
+ハローディストピア
+まふまふ feat.鏡音リン・レン
+0
+…
+夏の林檎
+Kalafina
+0
+…
+生命性シンドロウム
+かめりあ
+0
+…
+アプリコット
+いよわ feat.初音ミク
+0
+…
+おぎゃりないざー
+Ponchi♪ feat.初音ミク
+0
+…
+気まぐれメルシィ feat.初音ミク
+八王子P
+0
+…
+Beautiful Nightmare feat. 巡音ルカ
+八王子P
+0
+…
+み　む　かｩ　わ　ナ　イ　ス　ト　ラ　イ
+ぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬ
+0
+…
+仮定した夏
+はるまきごはん feat.初音ミク
+0
+…
+約束
+はるまきごはん
+0
+…
+八月のレイニー
+はるまきごはん
+0
+…
+セブンティーナ
+はるまきごはん
+0
+…
+再会
+はるまきごはん
+0
+…
+銀河録
+はるまきごはん
+0
+…
+終焉逃避行
+柊マグネタイト
+0
+…
+踊っチャイナ
+Atena
+0
+…
+桜ノ雨
+中孝介 feat.伊東歌詞太郎
+0
+…
+夢と葉桜
+青木月光
+0
+…
+みかげ日記
+はるまきごはん feat.初音ミク
+0
+…
+夢の大地
+Kalafina
+0
+…
+満天
+Kalafina
+0
+…
+oblivious
+Kalafina
+0
+…
+はるのはるか
+sasakure.UK
+0
+…
+Gimme×Gimme feat. 初音ミク・鏡音リン
+八王子P×Giga
 0
 …
 ヴァンパイア
@@ -887,16 +954,8 @@ iroha feat.鏡音リン
 てにをは feat.初音ミク
 0
 …
-メズマライザー
-サツキ
-0
-…
 カナリア
 ReoNa
-0
-…
-Before I Rise(Acoustic Ver.)
-She is Legend
 0
 …
 METEOR
@@ -909,10 +968,6 @@ kemu feat.IA
 …
 あいたい星人
 DECO*27
-0
-…
-テルーの唄
-手嶌 葵
 0
 …
 ディナーベル
@@ -943,18 +998,6 @@ supercell feat.初音ミク
 はるまきごはん
 0
 …
-アイドル(ビデオクリップバージョン)
-YOASOBI
-0
-…
-唱
-Ado
-0
-…
-ン・パカ マーチ
-徳光由香
-0
-…
 プロローグ(生音)
 Uru
 0
@@ -975,32 +1018,12 @@ Kalafina
 幽閉サテライト
 0
 …
-三日月 [良音]
-絢香
-0
-…
 残酷な天使のテーゼ
 高橋洋子
 0
 …
 うたかた花火(生音)
 supercell
-0
-…
-手紙～拝啓 十五の君へ～
-アンジェラ・アキ
-0
-…
-Last Smile
-麻枝准×やなぎなぎ
-0
-…
-シャルイース
-アキ・ローゼンタール
-0
-…
-千本桜
-WhiteFlame feat.初音ミク
 0
 …
 幻影
@@ -1011,10 +1034,6 @@ WhiteFlame feat.初音ミク
 はるまきごはん feat.初音ミク
 0
 …
-ひぐらしのなく頃に
-島みやえい子(島宮えい子)
-0
-…
 Arrietty's Song
 セシル・コルベル
 0
@@ -1023,52 +1042,8 @@ Arrietty's Song
 Silver Forest feat.さゆり
 0
 …
-動く、動く
-チト(CV:水瀬いのり)、ユーリ(CV:久保ユリカ)
-0
-…
 地球をあげる
 はるまきごはん
-0
-…
-チルノのパーフェクトさんすう教室
-イオシス/miko(Alternative ending),quim(IOSYS)
-0
-…
-Scarborough Fair [スカボロー・フェア]
-Simon & Garfunkel
-0
-…
-恋の氷結おてんば湯けむりチルノ温泉
-イオシス/miko(Alternative ending)
-0
-…
-運命狂サディスティック
-イオシス/あゆ(KKproject)
-0
-…
-馬と鹿
-米津玄師
-0
-…
-ECHO
-CIRCRUSH(Circus-P+Crusher-P) feat.Gumi English
-0
-…
-夏祭り
-Whiteberry
-0
-…
-夜な夜な夜な
-倉橋ヨエコ
-0
-…
-why,or why not
-大嶋啓之 feat.片霧烈火
-0
-…
-かくしん的☆めたまるふぉ～ぜっ!
-土間うまる(CV:田中あいみ)
 0
 …
 保存
@@ -1093,10 +1068,10 @@ ENJOY DAM
 
 SPECIAL
 
-DAMをもっと楽しめる情報を毎週発信中！
+DAMをもっと楽しめる情報を発信中！
 
-ボカロハロウィン特集
-DAMであそぼうII めざせフルコンボ！ 精密採点DXミリオンにチャレンジ！
+DAMアニカラFes!!2025
+ニコニコ超会議2025
 キャンペーン
 
 CAMPAIGN
@@ -1104,25 +1079,25 @@ CAMPAIGN
 課題曲を歌って応募して、
 豪華景品をGETしよう！
 
-ピックアップアーティスト WANIMA
-宝鐘マリン
-エスプリ
-GLAY 30周年コラボキャンペーン
-UNISON SQUARE GARDEN
-MISAMO
-THE ALFEE
-さくらみこ
-マルシィ
-西野カナ
-あいみょん
-back number
+ピックアップアーティスト GLAY
+猫又おかゆ
 BABYMONSTER
-東方ダンマクカグラ
-米津玄師
-SUPER EIGHT
-ONE OK ROCK
-HIMEHINA
-NEO EXILE
+あにそんボーカル保住有哉
+しまじろうコンサート
+超ときめき宣伝部
+ウマ娘 プリティーダービー
+TREASURE
+テイルズ オブ フェスティバル 2025
+KAWAII LAB
+初音ミク JAPAN LIVE TOUR 2025
+サザンオールスターズ
+ロックは淑女の嗜みでして
+劇場版『名探偵コナン 隻眼の残像』
+Ado
+Official髭男dism
+STPR Family Festival
+WHITE JAM
+AI　全DAM
 オーディション
 
 AUDITION
@@ -1130,8 +1105,9 @@ AUDITION
 オーディションに応募して、
 ステージ出場の権利をGETしよう！
 
+CHANCE GALs新メンバーオーディション
 プロレベル認定歌手
-歌唱王2024
+日本クラウン 新人オーディション2025
 カラオケバトル
 サイトマップ お問い合わせ DAM DAM★とも カラオケ＠DAM
 サイトのご利用について カラオケご利用にあたっての注意事項 DAM★とも会員規約 月額制サービスご利用にあたって
