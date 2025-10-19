@@ -4,10 +4,9 @@
 以下の最大4つの**テキストファイルに曲を保存し**、  
 本ディレクトリで**`source.py`を実行する**ことで、曲の重複を(~~ほぼ~~)除いて結合させた`result.csv`が出力されます。  
 `result.csv`はWordPressのプラグイン「TablePress」にインポートできる形式になっており、  
-`確認用.csv`は`result.csv`を見やすくcp932(Shift_JIS)にした物です。 
 
-- WordPressでインポートしたサンプル  
-	[これ(http://www.apln.work/2022/10/14/カラオケレパートリー/)](http://www.apln.work/2022/10/14/%e3%82%ab%e3%83%a9%e3%82%aa%e3%82%b1%e3%83%ac%e3%83%91%e3%83%bc%e3%83%88%e3%83%aa%e3%83%bc/)  
+- DataTablesでインポートしたサンプル  
+	[これ](https://apln-n.github.io/pages/KaraokeMyList/)  
 	列名をクリックしてソート可能(記号順…○、-、☆もいける)、画像は「Others」でソートした物です
 	<img src="_素材/スクショ1.png" alt="スクショ1" style="width: 75%">
 - `確認用.csv`のサンプル  
