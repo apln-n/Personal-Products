@@ -1,5 +1,9 @@
-import sys, csv, json, re
+import sys, csv, re
 
+def __error(s):
+	print(f"error: {s}")
+	sys.exit(-1)
+	
 # マイうたに登録できる曲
 def getJoySound1():
 	with open ("JoySound1.txt", "r") as f:
@@ -9,59 +13,32 @@ def getJoySound1():
 			return []
 		else:
 			# マイうたページ全体をコピーしてくる
-			size = -1
-			for s in li:
-				if("マイうた（" in s and "件）" in s):
-					size = int( s[len("マイうた（"): -(len("件）")+1)] )
-					print("JoySound1: {}".format(size))
-					break
-			if(size != -1):
-				i=0
-				j=len(li)-1
-				while(li[i][0] != "\n"):
-					i += 1
-				while(li[j][:-1] != "±0"):
-					j -= 1
-				li = li[i:j+1]
-				li = [s.replace("\n", "") for s in li]
-				tmp = []
-				# 曲数n
-				n = int(len(li)/8)
-				for i in range(0,n):
-					j = i*8
-					tmp.append( [li[j+2], li[j+4] ] )
-					# いま追加された曲
-					# print(tmp[-1])
+			try:
+				s = [s for s in li if ("マイうた（" in s and "件）" in s)][0]
+				size = int( s[len("マイうた（"): -(len("件）")+1)] )
+				print(f"JoySound1: {size}")
+				indexes = [i for i,x in enumerate(li) if "±0" in x]
+				tmp =  [[li[index-5].replace("\n",""),li[index-3].replace("\n","")] for index in indexes]
 				if(len(tmp) == size):
 					return tmp
 				else:
-					print("error: マイうたのコピーが正しく行われていません")
-					sys.exit(-1)
-			else:
-				print("error: マイうたの曲数が取得できませんでした")
-				sys.exit(-1)
+					__error("マイうたのコピーが正しく行われていません")
+			except:
+				__error("マイうたの曲数が取得できませんでした")
 
+				
 # getJoySound2(), Others()の本体
 def getManuallyAdds(name):
-	with open ("{}.txt".format(name), "r") as f:
+	with open (f"{name}.txt", "r") as f:
 		li = f.readlines()
 		if(len(li)==0):
-			print("{}: 0".format(name))
+			print(f"{name}: 0")
 			return []
 		else:
-			#改行のみの要素を削除
-			li = [s for s in li if s != "\n" ]
-			#要素中の改行(文字)、余計な文字列を削除
-			li = [s.replace("\n", "") for s in li]
-			print("{}: {}".format(name,len(li)))
+			li = [s.replace("\n", "") for s in li if "／" in s]
+			print(f"{name}: {len(li)}")
 			# 各要素の文字列を"／"(スラッシュ)で分解して曲ごとにリストにする
-			tmp = []
-			for s in li:
-				splited = re.split("[／]", s)
-				if(len(splited) == 2):
-					tmp.append(splited)
-				else:
-					tmp.append([s, ""])
+			tmp = [re.split("[／]", s)[:2] for s in li]
 			return tmp
 
 
@@ -75,14 +52,10 @@ def getDAM1():
 		else:
 			#要素中の改行(文字)、余計な文字列を削除
 			li = [s.replace("\n", "") for s in li]
-			data = []
-			for i in range(0,len(li)):
-				if(li[i] == "…"):
-					tmp = [li[i-3], li[i-2]]
-					if(tmp not in data):
-						data.append( tmp )
-			print("DAM1: {}".format(len(data)))
-			return data
+			indexes = [i for i,x in enumerate(li) if "…" in x]
+			tmp =  [[li[index-3].replace("\n",""),li[index-2].replace("\n","")] for index in indexes]
+			print(f"DAM1: {len(tmp)}")
+			return tmp
 
 # JOYSOUND2, DAM2, Others
 # マイうたやうたスキに登録できない曲
@@ -123,12 +96,13 @@ def cleaning(songLists):
 				while(i<len(brackets)):
 					if(brackets[i]["left"] in s and brackets[i]["right"] in s):
 						indexLeft = s.index(brackets[i]["left"])
-						for j in range(indexLeft+1, len(s)):
-							if(s[j] == brackets[i]["right"]):
-								indexRight = j
-								s = s[:indexLeft] + s[indexRight+1:]
-								i = 0
-								break
+						if indexLeft != 0:
+							for j in range(indexLeft+1, len(s)):
+								if(s[j] == brackets[i]["right"]):
+									indexRight = j
+									s = s[:indexLeft] + s[indexRight+1:]
+									i = 0
+									break
 					i += 1
 				if(s[-1] == " "):
 					s = s[:-1]
@@ -180,9 +154,8 @@ def isEqualSong(li1, li2):
 			#異なる曲の場合
 			return False
 	else:
-		print("error: リストに余計な情報が入っています")
-		sys.exit(-1)
-
+		__error("リストに余計な情報が入っています")
+		
 # songlists: [JoySound1(2次元リスト), JoySound2, DAM1, DAM2]
 # con: [ [曲名, 歌手名, JoySound(シンボル), DAM(シンボル)] ]
 # songlistsは3次元リスト
@@ -200,10 +173,9 @@ def merge(songLists, symbols):
 				elif(i==4):
 					con[-1][4] = symbols[i]
 				else:
-					print("error: 以下は、JoySound1, 2, DAM1, 2, Othersのどれにも保存されていない曲です")
+					__error("以下は、JoySound1, 2, DAM1, 2, Othersのどれにも保存されていない曲です")
 					print(li[:2])
-					sys.exit(-1)
-		print("Concatenated: {}".format(len(con)))
+					print(f"Concatenated: {len(con)}")
 
 		# i,j: 曲の行
 		merged = []
@@ -229,14 +201,13 @@ def merge(songLists, symbols):
 			# con[0]は毎回appendされるのでpopしておく、実質の「i--」と似た働き
 			merged.append( con[0] )
 			con.pop(0)
-		print("Merged: {}".format(len(merged)))
+		print(f"Merged: {len(merged)}")
 		#id付加
 		merged = [[(len(merged)-i), *row] for i,row in enumerate(merged)]
 		return merged
 	else:
-		print("error: 曲が無いです")
-		sys.exit(-1)
-
+		__error("曲が無いです")
+		
 
 # csv書き込み
 def writeSongs(mergedLists, colNames):
@@ -246,30 +217,29 @@ def writeSongs(mergedLists, colNames):
 		writer.writerow( colNames )
 		writer.writerows(mergedLists)
 	# encodingはデバッグ用
+	"""
 	with open("確認用.csv", "w", newline="", encoding="cp932") as f:
 		writer = csv.writer(f)
 		writer.writerow( colNames )
 		writer.writerows(mergedLists)
+	"""
 
 
 def checkSongLists(songLists):
-	pflag = True
-	name = ["JoySound1", "JoySound2", "DAM1", "DAM2", "Others"]
+	names = ["JoySound1", "JoySound2", "DAM1", "DAM2", "Others"]
 	print("Check song lists...")
-	if(len(songLists) == len(name)):
-		if(pflag):
-			for i in range(0,len(name)):
-				print("----------------------------------- {} -----------------------------------".format(name[i]))
-				# サンプル
-				for li in songLists[i][:5]:
-					print(li)
-				if(len(songLists[i]) > 10):
-					print("...")
+	if(len(songLists) == len(names)):
+		for i,name in enumerate(names):
+			print(f"----------------------------------- {name} -----------------------------------")
+			# サンプル
+			for li in songLists[i][:5]:
+				print(li)
+			if(len(songLists[i]) > 10):
+				print("...")
 		return
 	else:
-		print("error: 適切なデータを取得できませんでした")
-		sys.exit(-1)
-
+		__error("適切なデータを取得できませんでした")
+		
 
 #2次元リスト
 def checkMergedLists(mergedLists, colNames):
@@ -277,27 +247,21 @@ def checkMergedLists(mergedLists, colNames):
 	#idはマージする時に付加した
 	if(len(mergedLists[0])  == len(colNames)):
 		for li in mergedLists:
-			flag = False
-			for symbol in li[2:]:
-				if(symbol != "-"):
-					flag = True
-					break
-			if(not flag):
-				print("error: 以下の曲の情報を確認してください")
-				print(li)
-				sys.exit(-1)
-		print("----------------------------------- Result -----------------------------------")
+			if(len(li[2:]) == len([s for s in li[2:] if s=="-"])):
+				__error(f"以下の曲の情報を確認してください\n{li}")
+		# デバッグ用
+		"""
 		print(", ".join(colNames))
 		# サンプル
 		for li in mergedLists[:5]:
 			print(li)
 		if(len(mergedLists) > 5):
 			print("...")
+		"""
 		return
 	else:
-		print("error: 適切にデータがマージされていません")
-		sys.exit(-1)
-
+		__error("適切にデータがマージされていません")
+		
 def func():
 	#3次元リスト
 	songLists = getSongLists()
