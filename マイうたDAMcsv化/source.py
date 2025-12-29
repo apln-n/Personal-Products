@@ -127,7 +127,7 @@ def isEqualSong(li1, li2):
 		#同じ名前でなくとも短い曲名が長い曲名にアナグラムとして含まれることがあるので、歌手名での比較もすると良い
 		for i in range(0,len(li1)):
 			# len(s1) <= len(s2)
-			[s1, s2] = [li1[i],li2[i]] if (len(li1[i])<=len(li2[i])) else [li2[i],li1[i]]
+			[s1, s2] = [li1[i],li2[i]] if (len(li1[i])<len(li2[i])) else [li2[i],li1[i]]
 			#リストにする
 			s1 = list(s1.replace(" ","").replace("，","").replace(",","").lower())
 			s2 = list(s2.replace(" ","").replace("，","").replace(",","").lower())
@@ -175,11 +175,12 @@ def merge(songLists, symbols):
 				else:
 					__error("以下は、JoySound1, 2, DAM1, 2, Othersのどれにも保存されていない曲です")
 					print(li[:2])
-					print(f"Concatenated: {len(con)}")
+		print(f"Concatenated: {len(con)}")
 
 		# i,j: 曲の行
 		merged = []
 		while(len(con)>0):
+			popped = False
 			# con[0]を軸とする(重要)
 			# Othersの曲でない場合は比較
 			if(con[0][-1] != symbols[-1]):
@@ -193,14 +194,16 @@ def merge(songLists, symbols):
 						for j in range(0,2):
 							if(con[i][j+2]!="-" and con[0][j+2]=="-"):
 								con[0][j+2] = con[i][j+2]
-							con.pop(i)
+						con.pop(i)
+						popped = True
 						#print(con[0])
 						break
 					else:
 						continue
 			# con[0]は毎回appendされるのでpopしておく、実質の「i--」と似た働き
-			merged.append( con[0] )
-			con.pop(0)
+			if not popped:
+				merged.append( con[0] )
+				con.pop(0)
 		print(f"Merged: {len(merged)}")
 		#id付加
 		merged = [[(len(merged)-i), *row] for i,row in enumerate(merged)]
